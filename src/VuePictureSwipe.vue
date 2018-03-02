@@ -81,6 +81,7 @@
       }
     },
     data() {
+      return {};
     },
     mounted() {
       let initPhotoSwipeFromDOM = function (gallerySelector) {
