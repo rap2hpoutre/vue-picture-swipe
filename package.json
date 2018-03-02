@@ -4,7 +4,7 @@
   "description": "A Vue integration PhotoSwipe image plugin",
   "main": "src/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack -p"
   },
   "keywords": [
@@ -32,6 +32,7 @@
     "vue-loader": "^14.1.1",
     "vue-template-compiler": "^2.5.13",
     "webpack": "^4.0.1",
+    "webpack-cli": "^2.0.10",
     "webpack-dev-server": "^3.1.0"
   }
 }
