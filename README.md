@@ -1,6 +1,8 @@
 # Vue Picture Swipe Gallery
 
-A vue plugin that displays a gallery of image with swipe function. Includes lazy smart loading (mobile friendly) and 
+A vue plugin that displays a gallery of image with swipe function. 
+Includes lazy smart loading (mobile friendly) and thumbnails.
+Its backed by the awesome Photoswipe.
 
 ## Demo
 
@@ -83,3 +85,10 @@ Then run your watcher:
 ```
 npm run watch
 ```
+
+## Why?
+
+I did not found any component that uses thumbnail and is mobile-friendly (swipe)
+
+ - This one is in chinese only and has no thumbnails: https://github.com/LS1231/vue-preview
+ - 

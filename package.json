@@ -1,6 +1,6 @@
 {
   "name": "vue-picture-swipe",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A Vue integration PhotoSwipe image plugin",
   "main": "src/main.js",
   "scripts": {
@@ -15,6 +15,10 @@
     "preview",
     "vuejs"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rap2hpoutre/vue-picture-swipe.git"
+  },
   "author": "rap2hpoutre",
   "license": "MIT",
   "dependencies": {
