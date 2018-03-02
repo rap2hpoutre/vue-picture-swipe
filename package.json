@@ -1,0 +1,19 @@
+{
+  "name": "vue-picture-swipe",
+  "version": "0.1.0",
+  "description": "A Vue integration PhotoSwipe image plugin",
+  "main": "VuePictureSwipe.vue",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vue",
+    "photoswipe",
+    "image",
+    "gallery",
+    "preview",
+    "vuejs"
+  ],
+  "author": "rap2hpoutre",
+  "license": "MIT"
+}
