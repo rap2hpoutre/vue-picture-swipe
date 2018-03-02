@@ -1,6 +1,6 @@
 {
   "name": "vue-picture-swipe",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Vue integration PhotoSwipe image plugin",
   "main": "src/main.js",
   "scripts": {
