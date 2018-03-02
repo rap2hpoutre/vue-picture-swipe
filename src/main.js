@@ -1,2 +1,2 @@
-import VuejsHelloApp from './VuePictureSwipe.vue'
+import VuePictureSwipe from './VuePictureSwipe.vue'
 export default VuePictureSwipe
