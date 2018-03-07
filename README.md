@@ -1,5 +1,11 @@
 # Vue Picture Swipe Gallery
 
+[![npm download](https://img.shields.io/npm/dt/vue-picture-swipe.svg)](https://www.npmjs.com/package/vue-picture-swipe)
+[![npm version](https://img.shields.io/npm/v/vue-picture-swipe.svg)](https://www.npmjs.com/package/vue-picture-swipe)
+[![Package Quality](http://npm.packagequality.com/shield/vue-picture-swipe.svg)](http://packagequality.com/#?package=vue-picture-swipe)
+[![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
+[![MIT License](https://img.shields.io/github/license/rap2hpoutre/vue-picture-swipe.svg)](https://github.com/rap2hpoutre/vue-picture-swipe/blob/master/LICENSE)
+
 This component is a simple wrapper for the awesome [Photoswipe](http://photoswipe.com/).
 It's a [Vue](https://vuejs.org/) plugin that displays a gallery of image with swipe function (and more). 
 Includes lazy (smart) loading (mobile friendly) and thumbnails.
