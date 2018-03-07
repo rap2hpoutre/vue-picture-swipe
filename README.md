@@ -91,7 +91,7 @@ npm run watch
 
 I did not found any vue componant that uses thumbnail (smaller version of images) and is mobile-friendly (swipe)
 
- - [This one](https://github.com/LS1231/vue-preview) is documented (and issued) in chinese only and has no thumbnails.
+ - [This one](https://github.com/LS1231/vue-preview) is documented (and issued) in chinese only and has no thumbnails. Edit: I translated the readme (with google translate) and submitted [a PR that was accepted](https://github.com/LS1231/vue-preview/pull/32), so now, the documentation is in english)
  - [This one](https://github.com/zhaohaodang/vue-see) is documented (and issued) in chinese too and has no thumbnails either.
  - [This one](https://github.com/ymyang/vue-photoswipe) has no documentation.
  - [This one](https://github.com/SabatinoMasala/vue-simple-photoswipe) is a kind of fork of the previous one
