@@ -1,5 +1,11 @@
 # Vue Picture Swipe Gallery
 
+[![npm download](https://img.shields.io/npm/dt/vue-picture-swipe.svg)](https://www.npmjs.com/package/vue-picture-swipe)
+[![npm version](https://img.shields.io/npm/v/vue-picture-swipe.svg)](https://www.npmjs.com/package/vue-picture-swipe)
+[![Package Quality](http://npm.packagequality.com/shield/vue-picture-swipe.svg)](http://packagequality.com/#?package=vue-picture-swipe)
+[![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
+[![MIT License](https://img.shields.io/github/license/rap2hpoutre/vue-picture-swipe.svg)](https://github.com/rap2hpoutre/vue-picture-swipe/blob/master/LICENSE)
+
 This component is a simple wrapper for the awesome [Photoswipe](http://photoswipe.com/).
 It's a [Vue](https://vuejs.org/) plugin that displays a gallery of image with swipe function (and more). 
 Includes lazy (smart) loading (mobile friendly) and thumbnails.
@@ -91,7 +97,7 @@ npm run watch
 
 I did not found any vue componant that uses thumbnail (smaller version of images) and is mobile-friendly (swipe)
 
- - [This one](https://github.com/LS1231/vue-preview) is documented (and issued) in chinese only and has no thumbnails.
+ - [This one](https://github.com/LS1231/vue-preview) is documented (and issued) in chinese only and has no thumbnails. Edit: I translated the readme (with google translate) and submitted [a PR that was accepted](https://github.com/LS1231/vue-preview/pull/32), so now, the documentation is in english)
  - [This one](https://github.com/zhaohaodang/vue-see) is documented (and issued) in chinese too and has no thumbnails either.
  - [This one](https://github.com/ymyang/vue-photoswipe) has no documentation.
  - [This one](https://github.com/SabatinoMasala/vue-simple-photoswipe) is a kind of fork of the previous one
