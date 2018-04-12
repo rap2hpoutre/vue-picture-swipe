@@ -1,2 +1,3 @@
-import VuePictureSwipe from './VuePictureSwipe.vue'
-export default VuePictureSwipe
+import VuePictureSwipe from './VuePictureSwipe.vue';
+
+export default VuePictureSwipe;
