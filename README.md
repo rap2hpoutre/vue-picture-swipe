@@ -94,6 +94,17 @@ Then run your watcher:
 npm run watch
 ```
 
+## Advanced usage
+
+### PhotoSwipe options
+
+Use `options` for [Photoswipe options](http://photoswipe.com/documentation/options.html).
+
+```html
+<!-- Disable "share" buttons. -->
+<vue-picture-swipe :options="{shareEl: false}"></vue-picture-swipe>
+```
+
 ## Why?
 
 I did not found any vue componant that uses thumbnail (smaller version of images) and is mobile-friendly (swipe)
