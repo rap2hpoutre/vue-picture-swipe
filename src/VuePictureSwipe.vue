@@ -78,12 +78,17 @@
           }
         ],
         type: Array
+      },
+      options: {
+        default: () => ({}),
+        type: Object
       }
     },
     data() {
       return {};
     },
     mounted() {
+      let that = this;
       let initPhotoSwipeFromDOM = function (gallerySelector) {
 
         // parse slide data (url, title, size ...) from DOM elements
@@ -266,7 +271,7 @@
           }
 
           // Pass data to PhotoSwipe and initialize it
-          gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+          gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, Object.assign(options, that.options));
           gallery.init();
         };
 

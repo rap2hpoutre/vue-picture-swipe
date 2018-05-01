@@ -10,6 +10,8 @@ module.exports = {
       { test: /\.js$/, use: 'babel-loader' },
       // use vue-loader for .vue files
       { test: /\.vue$/, use: 'vue-loader' },
+      { test: /\.css$/, loader: 'style-loader!css-loader' },
+      { test: /\.(gif|svg|jpg|png)$/, loader: 'file-loader' },
     ],
   },
   // default for pretty much every project
