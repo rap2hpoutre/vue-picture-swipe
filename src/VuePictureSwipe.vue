@@ -27,6 +27,12 @@
           <div class="pswp__top-bar">
             <div class="pswp__counter"></div>
             <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+            <span class="rotation-wrapper">
+              <i class="material-icons" v-if=options.rotationOn @click="rotate(-90)">rotate_left</i>
+              <i class="material-icons" v-if=options.rotationOn @click="rotate(90)">rotate_right</i>
+            </span>
+
             <button class="pswp__button pswp__button--share" title="Share"></button>
             <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
             <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
@@ -41,9 +47,9 @@
           <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
             <div class="pswp__share-tooltip"></div>
           </div>
-          <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+          <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)" @click='resetAngle'>
           </button>
-          <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+          <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)" @click='resetAngle'>
           </button>
           <div class="pswp__caption">
             <div class="pswp__caption__center"></div>
@@ -85,7 +91,9 @@
       }
     },
     data() {
-      return {};
+      return {
+        angle: 0
+      };
     },
     mounted() {
       let that = this;
@@ -292,10 +300,29 @@
 
       initPhotoSwipeFromDOM('.my-gallery');
 
+    },
+    methods: {
+      rotate: function(newAngle) {
+        this.angle = this.angle + newAngle
+        this.$el.querySelectorAll('.pswp__img').forEach(i => i.style.transform = `rotate(${this.angle}deg)`)
+      },
+      resetAngle: function() {
+        this.angle = 0
+        this.$el.querySelectorAll('.pswp__img').forEach(i => i.style.transform = `rotate(${this.angle}deg)`)
+      },
     }
   }
 </script>
 <style>
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+  .pswp__top-bar {
+    text-align: right;
+  }
+  .rotation-wrapper {
+    color: white;
+    position: relative;
+    top: 10px;
+  }
   figure {
     display: inline;
     margin: 5px;
