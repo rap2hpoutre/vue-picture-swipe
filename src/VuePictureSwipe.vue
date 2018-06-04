@@ -8,7 +8,7 @@
           itemtype="http://schema.org/ImageObject"
           v-for="(item, index) in items" :src="item.src"
           v-bind:key="index">
-        <a :href="item.src" itemprop="contentUrl" :data-size="'' + item.w + 'x' + item.h">
+        <a :href="item.src" itemprop="contentUrl" :data-size="'' + item.w + 'x' + item.h" :title="item.title">
           <img :src="item.thumbnail" itemprop="thumbnail"/>
         </a>
       </figure>
@@ -127,7 +127,8 @@
             item = {
               src: linkEl.getAttribute('href'),
               w: parseInt(size[0], 10),
-              h: parseInt(size[1], 10)
+              h: parseInt(size[1], 10),
+              title: linkEl.getAttribute('title')
             };
 
 
@@ -317,6 +318,9 @@
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
   .pswp__top-bar {
     text-align: right;
+  }
+  .pswp__caption__center {
+    text-align: center
   }
   .rotation-wrapper {
     color: white;
