@@ -65,7 +65,8 @@ Create a component `Example.vue`. Then paste this:
           src: 'http://via.placeholder.com/600x400',
           thumbnail: 'http://via.placeholder.com/64x64',
           w: 600,
-          h: 400
+          h: 400,
+          alt: 'some numbers on a grey background' // optional alt attribute for thumbnail image
         },
         {
           src: 'http://via.placeholder.com/1200x900',
