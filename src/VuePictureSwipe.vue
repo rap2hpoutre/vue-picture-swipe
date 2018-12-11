@@ -228,7 +228,7 @@
         };
 
         let openPhotoSwipe = function (index, galleryElement, disableAnimation, fromURL) {
-          let pswpElement = document.querySelectorAll('.pswp')[0],
+          let pswpElement = galleryElement.parentElement.querySelector('.pswp'),
             gallery,
             options,
             items;
