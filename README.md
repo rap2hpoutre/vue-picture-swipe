@@ -106,6 +106,18 @@ Use `options` for [Photoswipe options](http://photoswipe.com/documentation/optio
 <vue-picture-swipe :options="{shareEl: false}"></vue-picture-swipe>
 ```
 
+### PhotoSwipe instance
+
+You can access the PhotoSwipe instance via setting a ref, the instance object is exposed as `pswp`.
+
+```html
+<vue-picture-swipe ref="pictureSwipe"></vue-picture-swipe>
+```
+```js
+this.$refs.pictureSwipe.pswp
+```
+
+
 ## Why?
 
 I did not found any vue componant that uses thumbnail (smaller version of images) and is mobile-friendly (swipe)
