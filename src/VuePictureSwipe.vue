@@ -93,6 +93,7 @@
     },
     data() {
       return {
+        pswp: null,
         angle: 0
       };
     },
@@ -295,6 +296,7 @@
             }
           });
           gallery.init();
+          that.pswp = gallery;
         };
 
         // loop through all gallery elements and bind events
