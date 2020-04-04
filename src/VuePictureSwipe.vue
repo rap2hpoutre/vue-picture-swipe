@@ -91,7 +91,7 @@
         default: () => ({}),
         type: Object
       },
-      singleThumb :{
+      singleThumbnail :{
         type : Boolean,
         default: false
       }
