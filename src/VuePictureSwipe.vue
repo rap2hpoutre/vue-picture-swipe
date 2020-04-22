@@ -3,6 +3,7 @@
     <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
 
       <figure
+          v-show="index > 0 && !singleThumbnail"
           itemprop="associatedMedia"
           itemscope
           itemtype="http://schema.org/ImageObject"
@@ -89,6 +90,10 @@
       options: {
         default: () => ({}),
         type: Object
+      },
+      singleThumbnail :{
+        type : Boolean,
+        default: false
       }
     },
     data() {
