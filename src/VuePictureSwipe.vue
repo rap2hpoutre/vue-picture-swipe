@@ -29,10 +29,8 @@
             <div class="pswp__counter"></div>
             <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 
-            <span class="rotation-wrapper">
-              <i class="material-icons" v-if=options.rotationOn @click="rotate(-90)">rotate_left</i>
-              <i class="material-icons" v-if=options.rotationOn @click="rotate(90)">rotate_right</i>
-            </span>
+            <button class="pswp__button pswp__button--rotate pswp__button--rotate--left" title="Rotate left" v-if="options.rotationOn" @click="rotate(-90)"></button>
+            <button class="pswp__button pswp__button--rotate pswp__button--rotate--right" title="Rotate right" v-if="options.rotationOn" @click="rotate(90)"></button>
 
             <button class="pswp__button pswp__button--share" title="Share"></button>
             <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
@@ -335,17 +333,21 @@
   }
 </script>
 <style>
-@import "https://fonts.googleapis.com/icon?family=Material+Icons";
   .pswp__top-bar {
     text-align: right;
   }
   .pswp__caption__center {
     text-align: center
   }
-  .rotation-wrapper {
-    color: white;
-    position: relative;
-    top: 10px;
+  .pswp__button--rotate {
+    background: url(./icons/rotate.png) 0 0 no-repeat;
+    background-size: 62px 24px;
+  }
+  .pswp__button--rotate--left {
+    background-position: 8px 10px;
+  }
+  .pswp__button--rotate--right {
+    background-position: -26px 10px;
   }
   figure {
     display: inline;
