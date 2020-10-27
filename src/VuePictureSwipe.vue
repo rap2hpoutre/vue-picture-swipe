@@ -3,6 +3,7 @@
     <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
 
       <figure
+          class="gallery-thumbnail"
           v-show="index === 0 || !singleThumbnail"
           itemprop="associatedMedia"
           itemscope
@@ -332,7 +333,7 @@
     }
   }
 </script>
-<style>
+<style scoped>
   .pswp__top-bar {
     text-align: right;
   }
@@ -349,7 +350,7 @@
   .pswp__button--rotate--right {
     background-position: -26px 10px;
   }
-  figure {
+  .gallery-thumbnail {
     display: inline;
     margin: 5px;
   }
