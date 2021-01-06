@@ -10,7 +10,9 @@
           itemtype="http://schema.org/ImageObject"
           v-for="(item, index) in items" :src="item.src"
           v-bind:key="index">
-        <a :href="item.src" itemprop="contentUrl" :data-size="'' + item.w + 'x' + item.h" :title="item.title">
+        <a 
+          v-show="nbThumbnailsDisplayed === -1 || index < nbThumbnailsDisplayed"
+          :href="item.src" itemprop="contentUrl" :data-size="'' + item.w + 'x' + item.h" :title="item.title">
           <img :src="item.thumbnail" :alt="item.alt" itemprop="thumbnail"/>
         </a>
       </figure>
@@ -93,7 +95,11 @@
       singleThumbnail :{
         type : Boolean,
         default: false
-      }
+      },
+      nbThumbnailsDisplayed: {
+      default: -1,
+      type: Number,
+      },
     },
     data() {
       return {
