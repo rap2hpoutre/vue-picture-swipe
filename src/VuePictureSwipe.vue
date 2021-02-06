@@ -307,6 +307,12 @@
           });
           gallery.init();
           that.pswp = gallery;
+
+          // trigger open event after swiper is opened
+          that.$emit('open')
+
+          // trigger close event after swiper is closed
+          gallery.listen('destroy', () => that.$emit('close'))
         };
 
         // loop through all gallery elements and bind events

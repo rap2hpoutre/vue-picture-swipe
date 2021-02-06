@@ -117,6 +117,13 @@ You can access the PhotoSwipe instance via setting a ref, the instance object is
 this.$refs.pictureSwipe.pswp
 ```
 
+### Events
+
+| open           | Attributes    | Listen to       | Description |
+| ---            | ---     | ---           | ---         |
+| Open           | none  | @open        | Emitted after gallery opens |
+| Close  | none  | @close | Emitted after gallery closes |
+
 
 ## Why?
 
