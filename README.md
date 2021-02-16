@@ -104,7 +104,7 @@ npm run watch
 | items | object | `{}` | dataset of the gallery | 
 | options | object | `{}` | PhotoSwipe options |
 | singleThumbnail | boolean | `false` | Only display one thumbnail |
-| nbThumbnailsDisplayed | Number | -1 | Number of Thumnails that will be displayed | 
+| nbThumbnailsDisplayed | Number | -1 | Number of Thumbnails that will be displayed. -1 means all | 
 
 ### PhotoSwipe options
 
