@@ -10,8 +10,9 @@
           itemtype="http://schema.org/ImageObject"
           v-for="(item, index) in items" :src="item.src"
           v-bind:key="index">
+          :style="!isNbThumbnailsDisplayed(index) ? 'margin:0px' : ''"
         <a 
-          v-show="nbThumbnailsDisplayed === -1 || index < nbThumbnailsDisplayed"
+          v-show="isNbThumbnailsDisplayed(index)"
           :href="item.src" itemprop="contentUrl" :data-size="'' + item.w + 'x' + item.h" :title="item.title">
           <img :src="item.thumbnail" :alt="item.alt" itemprop="thumbnail"/>
         </a>
@@ -334,6 +335,11 @@
 
     },
     methods: {
+      isNbThumbnailsDisplayed: function (index) {
+        return (
+          this.nbThumbnailsDisplayed === -1 || index < this.nbThumbnailsDisplayed
+        );
+      },
       rotate: function(newAngle) {
         this.angle = this.angle + newAngle
         this.$el.querySelectorAll('.pswp__img').forEach(i => i.style.transform = `rotate(${this.angle}deg)`)
