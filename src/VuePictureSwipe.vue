@@ -9,8 +9,8 @@
           itemscope
           itemtype="http://schema.org/ImageObject"
           v-for="(item, index) in items" :src="item.src"
-          v-bind:key="index">
-          :style="!isNbThumbnailsDisplayed(index) ? 'margin:0px' : ''"
+          v-bind:key="index"
+          :style="!isNbThumbnailsDisplayed(index) ? 'margin:0px' : ''">
         <a 
           v-show="isNbThumbnailsDisplayed(index)"
           :href="item.src" itemprop="contentUrl" :data-size="'' + item.w + 'x' + item.h" :title="item.title">
