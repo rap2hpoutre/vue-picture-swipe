@@ -111,6 +111,11 @@
         angle: 0
       };
     },
+    watch: {
+    singleThumbnail: function () {
+      this.$forceUpdate();
+    },
+  },
     mounted() {
       let that = this;
       let initPhotoSwipeFromDOM = function (gallerySelector) {
