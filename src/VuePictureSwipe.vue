@@ -326,7 +326,7 @@
             if (that.EvenBus) that.EventBus.$off("onCloseGallery");
             that.$emit('close');
           });
-
+        }
         // loop through all gallery elements and bind events
         let galleryElements = document.querySelectorAll(gallerySelector);
 
