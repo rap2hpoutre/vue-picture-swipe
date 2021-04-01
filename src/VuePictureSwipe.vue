@@ -324,7 +324,7 @@
           // trigger close event after swiper is closed
           gallery.listen('destroy', () => {
             if (that.EvenBus) that.EventBus.$off("onCloseGallery");
-            that.$emit('close'))
+            that.$emit('close'));
             }
           };
 
