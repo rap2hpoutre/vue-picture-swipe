@@ -98,8 +98,11 @@
         default: false
       },
       nbThumbnailsDisplayed: {
-      default: -1,
-      type: Number,
+        default: -1,
+        type: Number,
+      },
+      EventBus: {
+        type: Object,
       },
     },
     data() {
@@ -311,10 +314,19 @@
 
           // trigger open event after swiper is opened
           that.$emit('open')
+          
+          if (that.EventBus)
+          that.EventBus.$on("onCloseGallery", function () {
+            console.log("onclosegallery", that.pswp);
+            that.pswp.close();
+          });
 
           // trigger close event after swiper is closed
-          gallery.listen('destroy', () => that.$emit('close'))
-        };
+          gallery.listen('destroy', () => {
+            if (that.EvenBus) that.EventBus.$off("onCloseGallery");
+            that.$emit('close'))
+            }
+          };
 
         // loop through all gallery elements and bind events
         let galleryElements = document.querySelectorAll(gallerySelector);
