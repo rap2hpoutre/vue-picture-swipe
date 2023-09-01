@@ -1,6 +1,5 @@
 # Vue Picture Swipe Gallery
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/89b425b076134ff4b8bff5342d1942dc)](https://app.codacy.com/app/rap2hpoutre/vue-picture-swipe?utm_source=github.com&utm_medium=referral&utm_content=rap2hpoutre/vue-picture-swipe&utm_campaign=badger)
 [![npm download](https://img.shields.io/npm/dt/vue-picture-swipe.svg)](https://www.npmjs.com/package/vue-picture-swipe)
 [![npm version](https://img.shields.io/npm/v/vue-picture-swipe.svg)](https://www.npmjs.com/package/vue-picture-swipe)
 [![Package Quality](http://npm.packagequality.com/shield/vue-picture-swipe.svg)](http://packagequality.com/#?package=vue-picture-swipe)
