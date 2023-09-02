@@ -96,6 +96,15 @@ npm run watch
 
 ## Advanced usage
 
+### vuePictureSwipe options
+
+| Parameter | Type | Default | Description |
+| --- | :---: | :---: | --- |
+| items | object | `{}` | dataset of the gallery | 
+| options | object | `{}` | PhotoSwipe options |
+| singleThumbnail | boolean | `false` | Only display one thumbnail |
+| nbThumbnailsDisplayed | Number | -1 | Number of Thumbnails that will be displayed. -1 means all | 
+
 ### PhotoSwipe options
 
 Use `options` for [Photoswipe options](http://photoswipe.com/documentation/options.html).

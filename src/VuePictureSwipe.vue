@@ -9,9 +9,10 @@
           itemscope
           itemtype="http://schema.org/ImageObject"
           v-for="(item, index) in items" :src="item.src"
-          v-bind:key="index">
+          v-bind:key="index"
+          :style="!isNbThumbnailsDisplayed(index) ? 'margin:0px' : ''">
         <a 
-          v-show="nbThumbnailsDisplayed === -1 || index < nbThumbnailsDisplayed"
+          v-show="isNbThumbnailsDisplayed(index)"
           :href="item.src" itemprop="contentUrl" :data-size="'' + item.w + 'x' + item.h" :title="item.title">
           <img :src="item.thumbnail" :alt="item.alt" itemprop="thumbnail"/>
         </a>
@@ -97,8 +98,11 @@
         default: false
       },
       nbThumbnailsDisplayed: {
-      default: -1,
-      type: Number,
+        default: -1,
+        type: Number,
+      },
+      EventBus: {
+        type: Object,
       },
     },
     data() {
@@ -107,6 +111,11 @@
         angle: 0
       };
     },
+    watch: {
+    singleThumbnail: function () {
+      this.$forceUpdate();
+    },
+  },
     mounted() {
       let that = this;
       let initPhotoSwipeFromDOM = function (gallerySelector) {
@@ -310,11 +319,19 @@
 
           // trigger open event after swiper is opened
           that.$emit('open')
+          
+          if (that.EventBus)
+          that.EventBus.$on("onCloseGallery", function () {
+            console.log("onclosegallery", that.pswp);
+            that.pswp.close();
+          });
 
           // trigger close event after swiper is closed
-          gallery.listen('destroy', () => that.$emit('close'))
-        };
-
+          gallery.listen('destroy', () => {
+            if (that.EvenBus) that.EventBus.$off("onCloseGallery");
+            that.$emit('close');
+          });
+        }
         // loop through all gallery elements and bind events
         let galleryElements = document.querySelectorAll(gallerySelector);
 
@@ -334,6 +351,11 @@
 
     },
     methods: {
+      isNbThumbnailsDisplayed: function (index) {
+        return (
+          this.nbThumbnailsDisplayed === -1 || index < this.nbThumbnailsDisplayed
+        );
+      },
       rotate: function(newAngle) {
         this.angle = this.angle + newAngle
         this.$el.querySelectorAll('.pswp__img').forEach(i => i.style.transform = `rotate(${this.angle}deg)`)
