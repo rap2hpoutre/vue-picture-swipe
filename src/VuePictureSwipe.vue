@@ -15,6 +15,7 @@
           :href="item.src" itemprop="contentUrl" :data-size="'' + item.w + 'x' + item.h" :title="item.title">
           <img :src="item.thumbnail" :alt="item.alt" itemprop="thumbnail"/>
         </a>
+        <slot :index="index" :item="item"></slot>
       </figure>
     </div>
 
@@ -172,6 +173,10 @@
           e.preventDefault ? e.preventDefault() : e.returnValue = false;
 
           let eTarget = e.target || e.srcElement;
+
+          if(!(eTarget.getAttribute('itemprop') === 'thumbnail' && eTarget.tagName && eTarget.tagName.toUpperCase() === 'IMG')) {
+            return;
+          }
 
           // find root element of slide
           let clickedListItem = closest(eTarget, function (el) {
